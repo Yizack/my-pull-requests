@@ -40,6 +40,11 @@ export default defineCachedEventHandler(async (event) => {
     })
   }
 
+  setResponseHeaders(event, {
+    'Access-Control-Allow-Origin': '*',
+    'Access-Control-Allow-Methods': 'GET',
+  })
+
   return {
     user,
     prs,
