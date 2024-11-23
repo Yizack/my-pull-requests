@@ -54,5 +54,5 @@ export default defineCachedEventHandler(async (event) => {
   name: 'contributions',
   getKey: () => 'all',
   swr: true,
-  maxAge: 60 * 5, // 5 minutes
+  maxAge: 60 * 60 * 24, // 24 hours
 })
