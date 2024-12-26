@@ -30,7 +30,7 @@ export default defineCachedEventHandler(async (event) => {
 
     prs.push({
       repo: `${owner}/${name}`,
-      title: pr.title,
+      title: pr.title.replace(/`/g, ''),
       url: pr.html_url,
       created_at: pr.created_at,
       state: pr.pull_request?.merged_at ? 'merged' : pr.draft ? 'draft' : pr.state as 'open' | 'closed',
